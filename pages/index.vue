@@ -10,8 +10,6 @@
     <TheSlider />
     <TheEntry />
     <ComicModule />
-    <ComicModule />
-    <ComicModule />
     <div dclass="refresh " />
   </div>
 </template>

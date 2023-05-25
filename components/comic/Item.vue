@@ -1,25 +1,35 @@
+<script setup lang="ts">
+type Props = {
+  slug: string
+  name: string
+  thumbnail: string
+  review: string
+  follow: number
+}
+
+defineProps<Props>()
+</script>
+
 <template>
   <NuxtLink
-    to="/topic/1"
-    title="Không thể trốn bí mật"
+    :to="`/topic/${slug}`"
+    :title="name"
     class="comic-item"
   >
     <div class="cover">
       <img
-        src="https://tn1-f2.kkmh.com/image/200923/bBQcDegYl.webp-t.w414.webp.h"
-        vw="234"
-        data-src="https://tn1-f2.kkmh.com/image/200923/bBQcDegYl.webp-t.w414.webp.h"
+        :src="thumbnail"
         lazy="loaded"
       >
       <div class="mask">
-        1,89 triệu người theo dõi
+        {{ follow }} người theo dõi
       </div>
     </div>
     <div class="title">
-      Không thể trốn bí mật
+      {{ name }}
     </div>
     <div class="desc">
-      Chữa bệnh tuổi trẻ hàng ngày
+      {{ review ? review : '...' }}
     </div>
   </NuxtLink>
 </template>

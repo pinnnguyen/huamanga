@@ -15,7 +15,9 @@
     "@types/node": "^18",
     "@vant/nuxt": "^1.0.1",
     "eslint": "^8.41.0",
+    "mongoose": "^7.2.1",
     "nuxt": "^3.5.1",
+    "nuxt-icon": "^0.4.1",
     "nuxt-swiper": "^1.1.0",
     "typescript": "^5.0.4",
     "vant": "^4.4.0"

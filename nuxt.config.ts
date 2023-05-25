@@ -1,9 +1,16 @@
 export default defineNuxtConfig({
+  nitro: {
+    plugins: ['~/server/index.ts']
+  },
+  runtimeConfig: {
+    MONGO_URL: process.env.MONGODB_URI
+  },
   modules: [
     '@nuxtjs/tailwindcss',
     '@vant/nuxt',
     'nuxt-swiper',
-    '@nuxt/image-edge'
+    '@nuxt/image-edge',
+    'nuxt-icon'
   ],
   css: [
     '~/styles/index.css',

@@ -1,10 +1,15 @@
+<script setup lang="ts">
+const { data: homeData } = useFetch('/api/home')
+
+</script>
+
 <template>
-  <div class="find-item item-0">
+  <div v-for="hData in homeData" :key="hData.name" class="find-item item-0">
     <div class="comic-module-one">
       <h3 class="title">
-        Đề xuất cho bạn
+        {{ hData.name }}
       </h3>
-      <ComicBox />
+      <ComicBox :comics="hData.comics" />
       <div class="btn-box">
         <div>
           Xem thêm

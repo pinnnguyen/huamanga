@@ -1403,3 +1403,25 @@ footer a i[data-v-0e60b31e],footer button i[data-v-0e60b31e] {
     text-align: center;
     width: 6.6rem
 }
+
+.page-head {
+    background: #fff;
+    font-size: .85rem;
+    font-weight: 500;
+    height: 2.2rem;
+    line-height: 2.2rem;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.page-head .btns-back{
+    background: url("public/images/back.png") 50% no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    height: 1.2rem;
+    left: 1rem;
+    position: absolute;
+    top: 0.5rem;
+    width: 1.2rem;
+}
