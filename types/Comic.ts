@@ -14,4 +14,11 @@ export interface Comic {
     follow: Number,
     comment: Number,
     thumbnail: String,
+    chapterList: {
+        chapterId: string
+        chapterNumber: string
+        chapterTitle: string
+        updatedAt: string
+        view: string
+    }[]
 }

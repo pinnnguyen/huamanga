@@ -3,7 +3,24 @@ import { Comic } from '~/types/Comic'
 
 const route = useRoute()
 const slug = route.params.slug
-const { data: comic } = useFetch(`/api/comic/${slug}`)
+const { data: comic } = useFetch(`/api/comic/${slug}`, {
+  transform: (res: Comic) => {
+    return res
+  }
+})
+
+const chaplist = computed(() => comic.value?.chapterList)
+const chapPreview = ref()
+
+if (chaplist.value?.length > 0) {
+  chapPreview.value = await $fetch('/api/chapter/read', {
+    query: {
+      slug,
+      chapterNumber: chaplist.value[0].chapterNumber,
+      chapterId: chaplist.value[0].chapterId
+    }
+  })
+}
 </script>
 
 <template>
@@ -38,16 +55,20 @@ const { data: comic } = useFetch(`/api/comic/${slug}`)
     <TopicDescription>
       <template #genres>
         <span v-for="gen in comic.genres" :key="gen">
-          {{ gen }}
+          {{ gen.genreTitle }}
         </span>
       </template>
       <template #dess>
         {{ comic.review }}
       </template>
     </TopicDescription>
-    <TopicChapters />
+    <TopicChapters>
+      <template #status>
+        {{ comic.status }} | {{ comic.chapterList.length }} chương
+      </template>
+    </TopicChapters>
     <TopicChapterList />
-    <TopicRecommend />
+    <!--    <TopicRecommend />-->
     <TopicReadContinue />
     <div class="add-desktop" />
   </div>

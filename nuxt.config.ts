@@ -3,7 +3,8 @@ export default defineNuxtConfig({
     plugins: ['~/server/index.ts']
   },
   runtimeConfig: {
-    MONGO_URL: process.env.MONGODB_URI
+    MONGO_URL: process.env.MONGODB_URI,
+    SERVICE_URL: process.env.SERVICE_URL
   },
   modules: [
     '@nuxtjs/tailwindcss',

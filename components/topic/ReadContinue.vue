@@ -1,22 +1,10 @@
 <template>
   <div class="read-continue">
     <div class="title">
-      <font style="vertical-align: inherit;">
-        <font
-          style="vertical-align: inherit;"
-        >
-          Ấm lòng chó trung thành × miệng lưỡi lạnh lùng và độc địa
-        </font>
-      </font>
+      Ấm lòng chó trung thành × miệng lưỡi lạnh lùng và độc địa
     </div>
     <div class="read-button">
-      <font style="vertical-align: inherit;">
-        <font
-          style="vertical-align: inherit;"
-        >
-          bắt đầu đọc
-        </font>
-      </font>
+      bắt đầu đọc
     </div>
   </div>
 </template>

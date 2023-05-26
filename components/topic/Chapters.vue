@@ -1,20 +1,20 @@
 <template>
   <div class="chapters">
     <div class="left">
-      <div class="top">
-        <p>
-          tuyển tập truyện tranh
-        </p>
-        <div class="buy-button">
-          toàn bộ cuốn sách
-        </div> <!---->
-      </div>
+      <!--      <div class="top">-->
+      <!--        <p>-->
+      <!--          tuyển tập truyện tranh-->
+      <!--        </p>-->
+      <!--        <div class="buy-button">-->
+      <!--          toàn bộ cuốn sách-->
+      <!--        </div>-->
+      <!--      </div>-->
       <div class="chapters-info">
         <span>
-          Đã hoàn thành | Tổng cộng 29 nội dung | 27 văn
+          <slot name="status" />
         </span>
         <div class="right">
-          Mở rộng sự lựa chọn
+          Xem thêm
           <i class="arrow" />
         </div>
       </div>
